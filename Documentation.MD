@@ -38,6 +38,26 @@ int main(void){
 - Sets the cursor to the (in the header file defined) default position.
 See [CUI_DEFAULT_CURSORX](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/Documentation.MD#cui_default_cursorx) or [CUI_DEFAULT_CURSORY](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/Documentation.MD#cui_default_cursory)
 
+### cui_setColor(char, char)
+>Example
+```C
+  // some code
+  cui_setColor('F', 'F');
+  printf("foo");
+  // different code
+```
+- Sets the color of the back- and foreground of the console
+- Reset to default color with [cui_resetColor](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/Documentation.MD#cui_resetcolor)
+
+### cui_resetColor()
+>Example
+```C
+  cui_setColor('F', 'F');
+  printf("foo");
+  cui_resetColor();
+```
+- Resets the set color to the default console black and white color pallet
+
 # Symbolic Constants
 ### CUI_DEFAULT_CURSORX
 >Example
