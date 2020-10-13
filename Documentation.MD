@@ -1,12 +1,12 @@
 # Functions
-### cui_init()
+### cui_setUp()
 >Example
 ```C
 #include <windows.h>
 #include "CUI.h"
 
 int main(void){
-  cui_init();
+  cui_setUp();
 }
 ```
 
@@ -67,7 +67,7 @@ See [CUI_DEFAULT_CURSORX](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/D
 
 int main(void){
 
-  cui_init();
+  cui_setUp();
   
   cui_createBorder(15, 3);
   
