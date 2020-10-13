@@ -1,5 +1,5 @@
 # WConsoleUI
-Delivers helper functions for the (plain C) console. Such as creating borders. Mainly used for school consoel projects.
+Delivers helper functions for the (plain C) console. Such as creating borders. Mainly used for school console projects.
 This Project is written in plain C and is only usable with Windows-based systems in plain C.
 
 # Functions and Usage
