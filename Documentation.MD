@@ -58,6 +58,11 @@ See [CUI_DEFAULT_CURSORX](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/D
 ```
 - Resets the set color to the default console black and white color pallet
 
+### cui_createBorder(int, int)
+### cui_createStdBorder()
+### cui_createSmallBorder(int, int, int, int)
+### cui_clear()
+
 # Symbolic Constants
 ### CUI_DEFAULT_CURSORX
 >Example
