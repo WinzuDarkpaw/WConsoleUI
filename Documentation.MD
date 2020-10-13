@@ -11,36 +11,72 @@ int main(void){
 
 - Changes the codepage to get the correct characters to draw proper borders
 - Clears the console
->Definition
+
+### cui_setCursor(int, int)
+>Example
 ```C
-void cui_init()
-{
-  system("chcp 437");
-  system("cls");
-}
+  cui_setCursor(1,1); // Sets the cursor to x=1, y=1
+  scanf("%c", &someChar);
+  cui_setCursor(1,2); // Sets the cursor to x=1, y=2
+  printf("Your char was %c", someChar);
 ```
+- Sets the cursor to a certain position in the console
+- Point x=0, y=0 represents the upper left point in the console
+- Therefor, *cui_setCursor(5,5)* sets the Cursor 5 places to the right and 5 places down (from the point x=0, y=0)
+
+### cui_resetCursor()
+>Example
+```C
+  // some code
+  cui_resetCursor();
+```
+>Equivalant to
+```C
+  // some code
+  cui_setCursor(0,0);
+```
+- Sets the cursor to the (in the header file defined) default position.
+See [CUI_DEFAULT_CURSORX] or [CUI_DEFAULT_CURSORY]
 
 # Symbolic Constants
+### CUI_DEFAULT_CURSORX
+>Example
+```C
+  cui_setCursor(CUI_DEFAULT_CURSORX, 3);
+```
+```C
+#define CUI_DEFAULT_CURSORX 0
+```
+- Defines the default X-Coordinate of the cursor
+### CUI_DEFAULT_CURSORY
+```C
+  cui_setCursor(5, CUI_DEFAULT_CURSORY);
+```
+```C
+#define CUI_DEFAULT_CURSORY 0
+```
+- Defines the default Y-Coordinate of the cursor
+
 ### CUI_COLOR_BLUESCREEN
-- Is only usable inside the CUI Functions or functions which uses two chars as parameters
 >Example
 ```C
   cui_setColor(CUI_COLOR_BLUESCREEN);
-  //print out something
+  // print out something
   cui_resetColor();
 ```
 >Definition
 ```C
 #define CUI_COLOR_BLUESCREEN '4', '4'
 ```
+- Is only usable inside the CUI Functions or functions which uses two chars as parameters
 # Macros
 ### border(x,y)
 - Macro for cui_createBorder(int height, int width)
 >Example
 ```C
-  //Some code
+  // Some code
   border(65, 18);
-  //Some more code
+  // Some more code
 ```
 >Definition
 ```C
