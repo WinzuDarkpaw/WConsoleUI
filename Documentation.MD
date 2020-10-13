@@ -2,6 +2,7 @@
 ### cui_init()
 >Example
 ```C
+#include <windows.h>
 #include "CUI.h"
 
 int main(void){
@@ -61,11 +62,21 @@ See [CUI_DEFAULT_CURSORX](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/D
 ### cui_createBorder(int, int)
 >Example
 ```C
+#include <windows.h>
+#include "CUI.h"
+
+int main(void){
+
+  cui_init();
+  
   cui_createBorder(15, 3);
+  
   // Write Text inside border (without replacing border)
   cui_setCursor(1,1);
   printf("Hello, world!");
+  
   // further code
+}
 ```
 - Creates a border with width x and height y
 - The first parameter is the width, the second parameter is the height
