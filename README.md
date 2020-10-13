@@ -10,3 +10,8 @@ The CUI.c / CUI.h contributes functions to:
   - Set/Reset color of text background and foreground
   - Set/Reset cursor position
   - cui_init is used to set the correct codepage for the border characters (chcp 437)
+
+## windows.h MUST be included in your project!
+```C
+#include <windows.h>
+```
