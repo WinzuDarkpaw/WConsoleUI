@@ -1,3 +1,4 @@
+/** https://github.com/WinzuDarkpaw/WConsoleUI **/
 ///
 /// DISCLAIMER: <windows.h> must be included
 ///
