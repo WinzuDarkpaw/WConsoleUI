@@ -1,4 +1,3 @@
-# Functions (Initilizer)
-# Sourcefile
+# Functions
 # Symbolic Constants
 # Macros
