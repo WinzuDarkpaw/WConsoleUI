@@ -59,9 +59,48 @@ See [CUI_DEFAULT_CURSORX](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/D
 - Resets the set color to the default console black and white color pallet
 
 ### cui_createBorder(int, int)
+>Example
+```C
+  cui_createBorder(15, 3);
+  // Write Text inside border (without replacing border)
+  cui_setCursor(1,1);
+  printf("Hello, world!");
+  // further code
+```
+- Creates a border with width x and height y
+- The first parameter is the width, the second parameter is the height
+- The upper left corner of the border is the current point of the cursor
+  - But it will cause issues to the border when the cursor position is not X=0
+
 ### cui_createStdBorder()
+>Example
+```C
+  cui_createStdBorder();
+  // some code
+```
+- Creates a border with a (in the header file defined) standard width and height
+- The upper left corner of the border is the current point of the cursor
+  - But it will cause issues to the border when the cursor position is not X=0
+  
 ### cui_createSmallBorder(int, int, int, int)
+```C
+  // previous code
+  cui_createSmallBorder(3,3,10,5);
+  // Write something into the border
+  cui_setCursor(4,4);
+  printf("foo");
+  // further code
+```
+- Creates a border with a width of a and a height of b at the point x and y
+- Parameter one is the point x, two is the point y, three is the width a and four is the height b
+
 ### cui_clear()
+```C
+  // previous code
+  cui_clear();
+  // further code, maybe create a new border (use it as a window for example)
+````
+- Clears the console
 
 # Symbolic Constants
 ### CUI_DEFAULT_CURSORX
@@ -69,14 +108,17 @@ See [CUI_DEFAULT_CURSORX](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/D
 ```C
   cui_setCursor(CUI_DEFAULT_CURSORX, 3);
 ```
+>Definition
 ```C
 #define CUI_DEFAULT_CURSORX 0
 ```
 - Defines the default X-Coordinate of the cursor
 ### CUI_DEFAULT_CURSORY
+>Example
 ```C
   cui_setCursor(5, CUI_DEFAULT_CURSORY);
 ```
+>Definition
 ```C
 #define CUI_DEFAULT_CURSORY 0
 ```
@@ -91,9 +133,49 @@ See [CUI_DEFAULT_CURSORX](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/D
 ```
 >Definition
 ```C
-#define CUI_COLOR_BLUESCREEN '4', '4'
+  // TODO
 ```
 - Is only usable inside the CUI Functions or functions which uses two chars as parameters
+
+### CUI_COLOR_ERROR
+>Example
+```C
+  cui_setColor(CUI_COLOR_ERROR);
+  // print out something
+  cui_resetColor();
+```
+>Definition
+```C
+  // TODO
+```
+- Is only usable inside the CUI Functions or functions which uses two chars as parameters
+
+### CUI_COLOR_DEBUG
+>Example
+```C
+  cui_setColor(CUI_COLOR_DEBUG);
+  // print out something
+  cui_resetColor();
+```
+>Definition
+```C
+  // TODO
+```
+- Is only usable inside the CUI Functions or functions which uses two chars as parameters
+
+### CUI_COLOR_CONTRAST
+>Example
+```C
+  cui_setColor(CUI_COLOR_CONTRAST);
+  // print out something
+  cui_resetColor();
+```
+>Definition
+```C
+  // TODO
+```
+- Is only usable inside the CUI Functions or functions which uses two chars as parameters
+
 # Macros
 ### border(x,y)
 - Macro for cui_createBorder(int height, int width)
