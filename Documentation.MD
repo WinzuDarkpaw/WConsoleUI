@@ -36,7 +36,7 @@ int main(void){
   cui_setCursor(0,0);
 ```
 - Sets the cursor to the (in the header file defined) default position.
-See [CUI_DEFAULT_CURSORX] or [CUI_DEFAULT_CURSORY]
+See [CUI_DEFAULT_CURSORX](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/Documentation.MD#cui_default_cursorx) or [CUI_DEFAULT_CURSORY](https://github.com/WinzuDarkpaw/WConsoleUI/blob/main/Documentation.MD#cui_default_cursory)
 
 # Symbolic Constants
 ### CUI_DEFAULT_CURSORX
