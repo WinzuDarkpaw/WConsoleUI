@@ -40,7 +40,7 @@ int cui_setColor(char colorCodeBackground, char colorCodeForeground);
 int cui_resetColor();
 
 // Creates a border with specific width and height
-void cui_createBorder(int borderWidth, int borderHeight);+
+void cui_createBorder(int borderWidth, int borderHeight);
 
 // Creates a 65 * 18 border
 void cui_createStdBorder();
