@@ -1,3 +1,2 @@
-## Version 0.1
-#### Basic functions implemented
-- More to follow
+## Version 1.0.1
+- Fixed compiling error of the 'cui_createBorder(int, int);' function
